@@ -1,0 +1,13 @@
+{
+  "name": "quasar-master",
+  "version": "0.0.1",
+  "description": "A Quasar Project Supporting All Platforms",
+  "author": "hongming.low <hongming.low@atoz-software.tech>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/app": "^7.0.0",
+    "@capacitor/cli": "^7.0.0",
+    "@capacitor/core": "^7.0.0"
+  }
+}
