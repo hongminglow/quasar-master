@@ -1,5 +1,7 @@
 # Quasar App (quasar-master)
 
+# Support Multi Platforms
+
 A Quasar Project Supporting All Platforms
 
 ## Install the dependencies
