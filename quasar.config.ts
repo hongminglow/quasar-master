@@ -166,7 +166,7 @@ export default defineConfig((/* ctx */) => {
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-electron-apps/configuring-electron
-    electron: {
+  electron: {
       // extendElectronMainConf (esbuildConf) {},
       // extendElectronPreloadConf (esbuildConf) {},
 
@@ -178,7 +178,7 @@ export default defineConfig((/* ctx */) => {
       // specify the debugging port to use for the Electron app when running in development mode
       inspectPort: 5858,
 
-      bundler: 'packager', // 'packager' or 'builder'
+  bundler: 'builder', // 'packager' or 'builder'
 
       packager: {
         // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options
@@ -193,8 +193,30 @@ export default defineConfig((/* ctx */) => {
 
       builder: {
         // https://www.electron.build/configuration/configuration
-
-        appId: 'quasar-master',
+        appId: 'com.atoz.quasar',
+        productName: 'Quasar App',
+        directories: {
+          output: 'dist/electron'
+        },
+        win: {
+          target: 'nsis',
+          icon: 'src-electron/icons/icon.ico'
+        },
+        nsis: {
+          oneClick: false,
+          allowToChangeInstallationDirectory: true,
+          createDesktopShortcut: true,
+          createStartMenuShortcut: true,
+          shortcutName: 'Quasar App'
+        },
+        mac: {
+          target: 'dmg',
+          icon: 'src-electron/icons/icon.icns'
+        },
+        linux: {
+          target: 'AppImage',
+          icon: 'src-electron/icons/icon.png'
+        }
       },
     },
 
